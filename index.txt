@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIA – Business Setup Germany</title>
+  <meta name="description" content="NIA helps international founders and companies enter the German market with structure, clarity, and hands-on coordination." />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root{
+      --gold:#c5a46d;
+      --gold-light:#e5d0a0;
+      --gold-dark:#9e7a3f;
+      --black:#0b0b0c;
+      --cream:#f7f3ee;
+      --white:#ffffff;
+      --muted:#6f6a65;
+      --line:#e6ddd2;
+      --soft:#fdfaf6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 6vw;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(247,243,238,0.86);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(197,164,109,0.14);
+    }
+
+    .nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 6vw;
+      height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .nav-brand strong {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .nav-brand span {
+      font-size: 0.74rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover,
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      background: var(--black);
+      color: var(--white);
+      padding: 11px 24px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-dark);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 96vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.02);
+    }
+
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, rgba(11,11,12,0.88) 0%, rgba(11,11,12,0.68) 38%, rgba(11,11,12,0.26) 100%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 96px 6vw 80px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(4rem, 7vw, 7.6rem);
+      line-height: 0.92;
+      letter-spacing: -0.035em;
+      font-weight: 300;
+      color: var(--white);
+      max-width: 11ch;
+    }
+
+    h1 em {
+      display: block;
+      font-style: italic;
+      color: var(--gold-light);
+      font-weight: 400;
+    }
+
+    .hero-sub {
+      margin-top: 28px;
+      max-width: 44ch;
+      font-size: 1.04rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.72);
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 42px;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-gold,
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 14px 28px;
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      transition: .25s ease;
+      min-width: 190px;
+    }
+
+    .btn-primary {
+      background: var(--white);
+      color: var(--black);
+      border: 1.5px solid var(--white);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.28);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold-light);
+      color: var(--gold-light);
+    }
+
+    .hero-panel {
+      margin-top: 56px;
+      max-width: 840px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.11);
+      backdrop-filter: blur(14px);
+      border-radius: 24px;
+      padding: 22px 22px 20px;
+      box-shadow: 0 16px 50px rgba(0,0,0,0.18);
+    }
+
+    .hero-card strong {
+      display: block;
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .hero-card span {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.7);
+      font-weight: 300;
+    }
+
+    .strip {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+      padding: 15px 0;
+    }
+
+    .strip-track {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 24s linear infinite;
+    }
+
+    .strip-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 30px;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .section {
+      padding: 112px 0;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.7rem, 4.6vw, 4.8rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+
+    h2 em {
+      font-style: italic;
+      color: var(--gold-dark);
+    }
+
+    .section-intro {
+      margin-top: 18px;
+      max-width: 60ch;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.95;
+      font-weight: 300;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 56px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 38px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: .3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.08);
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: .3s ease;
+    }
+
+    .service-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      background: rgba(197,164,109,0.1);
+      border: 1px solid rgba(197,164,109,0.22);
+      font-size: 1.32rem;
+      margin-bottom: 14px;
+    }
+
+    .service-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: var(--line);
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+
+    .service-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.04;
+      margin-bottom: 14px;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 0.66rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .positioning {
+      background: var(--black);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .positioning::before {
+      content: "";
+      position: absolute;
+      left: -180px;
+      bottom: -180px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(197,164,109,0.08), transparent 65%);
+      pointer-events: none;
+    }
+
+    .positioning-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .positioning .section-label {
+      color: rgba(229,208,160,0.85);
+    }
+
+    .positioning .section-label::before {
+      background: rgba(229,208,160,0.42);
+    }
+
+    .positioning h2 {
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+
+    .positioning h2 em {
+      color: var(--gold-light);
+    }
+
+    .positioning p {
+      font-size: 0.96rem;
+      line-height: 1.95;
+      color: rgba(255,255,255,0.62);
+      font-weight: 300;
+      margin-bottom: 16px;
+      max-width: 60ch;
+    }
+
+    .positioning-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .mini-card {
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(197,164,109,0.14);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--gold);
+      font-size: 0.76rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .mini-card span {
+      display: block;
+      font-size: 0.86rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.52);
+      font-weight: 300;
+    }
+
+    .positioning-image {
+      position: relative;
+    }
+
+    .positioning-frame {
+      border-radius: 30px;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      position: relative;
+      box-shadow: 0 34px 80px rgba(0,0,0,0.22);
+    }
+
+    .positioning-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .positioning-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 48%, rgba(11,11,12,0.66) 100%);
+    }
+
+    .positioning-badge {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      z-index: 2;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(11,11,12,0.82);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(197,164,109,0.18);
+    }
+
+    .positioning-badge strong {
+      display: block;
+      color: var(--white);
+      margin-bottom: 4px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .positioning-badge span {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
+      text-transform: uppercase;
+    }
+
+    .about {
+      background: linear-gradient(180deg, var(--soft) 0%, var(--cream) 100%);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 58px;
+      align-items: center;
+      margin-top: 56px;
+    }
+
+    .about-media {
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 34px 80px rgba(0,0,0,0.18);
+      aspect-ratio: 4 / 5;
+      background: var(--white);
+    }
+
+    .about-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-text p {
+      font-size: 0.92rem;
+      line-height: 1.95;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .about-text p + p {
+      margin-top: 12px;
+    }
+
+    .about-signature {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .about-signature strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+
+    .about-signature span {
+      color: var(--gold-dark);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 56px;
+    }
+
+    .process-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 38px 30px;
+      position: relative;
+      transition: .3s ease;
+    }
+
+    .process-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 55px rgba(0,0,0,0.07);
+    }
+
+    .process-step {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--line);
+      margin-bottom: 16px;
+      font-weight: 300;
+    }
+
+    .process-card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .process-card p {
+      font-size: 0.88rem;
+      line-height: 1.85;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .process-arrow {
+      position: absolute;
+      top: 28px;
+      right: 24px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+    }
+
+    .cta-wrap {
+      padding-bottom: 80px;
+    }
+
+    .cta-box {
+      background: var(--black);
+      color: var(--white);
+      border-radius: 40px;
+      padding: 68px 60px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::before {
+      content: "";
+      position: absolute;
+      right: -150px;
+      top: -150px;
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(197,164,109,0.1), transparent 65%);
+      pointer-events: none;
+    }
+
+    .cta-box h2 {
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .cta-box h2 em {
+      color: var(--gold-light);
+    }
+
+    .cta-box p {
+      max-width: 48ch;
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.55);
+      font-weight: 300;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 240px;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--white);
+      border: 1.5px solid var(--gold);
+      font-weight: 600;
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-dark);
+      border-color: var(--gold-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.2);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold-light);
+      color: var(--gold-light);
+    }
+
+    .legal-section {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      padding: 80px 0;
+    }
+
+    .legal-box {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 36px 30px;
+      margin-bottom: 22px;
+    }
+
+    .legal-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+
+    .legal-box p,
+    .legal-box li,
+    .legal-box address {
+      font-size: 0.9rem;
+      line-height: 1.9;
+      color: var(--muted);
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .legal-box strong {
+      color: var(--black);
+      font-weight: 600;
+    }
+
+    footer {
+      background: var(--black);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 32px 6vw;
+      color: rgba(255,255,255,0.34);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.78rem;
+      flex-wrap: wrap;
+    }
+
+    footer img {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.72;
+      filter: brightness(1.8);
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 1080px) {
+      .nav-links { display: none; }
+
+      .hero-panel,
+      .services-grid,
+      .process-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .positioning-grid,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .positioning-image,
+      .about-media {
+        order: -1;
+      }
+
+      .cta-actions {
+        min-width: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner {
+        height: auto;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        align-items: center;
+      }
+
+      .nav-brand { display: none; }
+
+      h1 {
+        font-size: clamp(3.1rem, 13vw, 4.8rem);
+        max-width: 10ch;
+      }
+
+      .hero-sub {
+        font-size: 0.96rem;
+      }
+
+      .hero-inner {
+        padding-top: 72px;
+      }
+
+      .positioning-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        padding: 42px 30px;
+        border-radius: 30px;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .footer-links {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a class="nav-logo" href="#">
+          <img src="logo.png" alt="NIA Business Setup Germany logo" />
+        </a>
+        <div class="nav-brand">
+          <strong>NIA</strong>
+          <span>Business Setup Germany</span>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#positioning">Why NIA</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+      </div>
+
+      <a class="nav-cta" href="mailto:hello@nia-business.com?subject=NIA%20Discovery%20Call">Book a Discovery Call</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1800&q=80&fit=crop" alt="Frankfurt skyline" />
+      </div>
+
+      <div class="hero-inner">
+        <div class="eyebrow">Market Entry · Company Formation · Coordination</div>
+        <h1>Enter Germany <em>with structure,</em> not friction.</h1>
+        <p class="hero-sub">
+          NIA helps international founders, investors and companies navigate the German market entry process with clarity, sequencing and hands-on coordination across legal, tax and administration.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="mailto:hello@nia-business.com?subject=NIA%20Discovery%20Call">Book a Discovery Call</a>
+          <a class="btn-secondary" href="#services">Explore Services</a>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-card">
+            <strong>Clear sequencing</strong>
+            <span>We help define what needs to happen, in what order, and with which stakeholders.</span>
+          </div>
+          <div class="hero-card">
+            <strong>Cross-border understanding</strong>
+            <span>We bridge international expectations with German structures, timing and requirements.</span>
+          </div>
+          <div class="hero-card">
+            <strong>Hands-on coordination</strong>
+            <span>We keep momentum where fragmented processes usually create delay, confusion and friction.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="strip-track">
+        <span class="strip-item"><span class="dot"></span>Market Entry Strategy</span>
+        <span class="strip-item"><span class="dot"></span>Company Formation</span>
+        <span class="strip-item"><span class="dot"></span>Trade Register</span>
+        <span class="strip-item"><span class="dot"></span>Tax Coordination</span>
+        <span class="strip-item"><span class="dot"></span>Legal Interfaces</span>
+        <span class="strip-item"><span class="dot"></span>Administrative Setup</span>
+        <span class="strip-item"><span class="dot"></span>Cross-Border Structuring</span>
+        <span class="strip-item"><span class="dot"></span>Operational Clarity</span>
+
+        <span class="strip-item"><span class="dot"></span>Market Entry Strategy</span>
+        <span class="strip-item"><span class="dot"></span>Company Formation</span>
+        <span class="strip-item"><span class="dot"></span>Trade Register</span>
+        <span class="strip-item"><span class="dot"></span>Tax Coordination</span>
+        <span class="strip-item"><span class="dot"></span>Legal Interfaces</span>
+        <span class="strip-item"><span class="dot"></span>Administrative Setup</span>
+        <span class="strip-item"><span class="dot"></span>Cross-Border Structuring</span>
+        <span class="strip-item"><span class="dot"></span>Operational Clarity</span>
+      </div>
+    </div>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-label">What we do</div>
+        <h2>Three services.<br><em>One coordinated path.</em></h2>
+        <p class="section-intro">
+          Germany is not difficult because of one big obstacle. It becomes difficult when multiple steps, advisors and authorities are not aligned. NIA brings order to that process.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🗺️</div>
+            <div class="service-number">01</div>
+            <h3>Market Entry</h3>
+            <p>
+              Strategic clarification of your business case, market entry logic, timing and setup options before time and money are lost in the wrong sequence.
+            </p>
+            <div class="tags">
+              <span class="tag">Assessment</span>
+              <span class="tag">Structure</span>
+              <span class="tag">Roadmap</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🏛️</div>
+            <div class="service-number">02</div>
+            <h3>Company Formation</h3>
+            <p>
+              Coordination of formation steps, documentation, notary preparation and stakeholder communication until your German entity is properly set up.
+            </p>
+            <div class="tags">
+              <span class="tag">GmbH / UG</span>
+              <span class="tag">Notary</span>
+              <span class="tag">Trade Register</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">⚙️</div>
+            <div class="service-number">03</div>
+            <h3>Administration</h3>
+            <p>
+              Practical support for registrations, communication, follow-up and ongoing coordination so your German operations move forward without unnecessary friction.
+            </p>
+            <div class="tags">
+              <span class="tag">Coordination</span>
+              <span class="tag">Support</span>
+              <span class="tag">Execution</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section positioning" id="positioning">
+      <div class="container">
+        <div class="positioning-grid">
+          <div>
+            <div class="section-label">Why NIA</div>
+            <h2>Not another advisor.<br><em>A strategic interface.</em></h2>
+            <p>
+              Tax advisors handle taxes. Lawyers handle legal matters. Authorities handle their procedures. But international clients often still face one central problem: no one is actively aligning the sequence, expectations and practical next steps.
+            </p>
+            <p>
+              That is where NIA adds value. We help translate business goals into a structured process, connect the relevant parties and keep the overall direction clear.
+            </p>
+            <p>
+              Our role is not to replace specialists. Our role is to make their work fit the actual business objective.
+            </p>
+
+            <div class="positioning-cards">
+              <div class="mini-card">
+                <strong>Languages</strong>
+                <span>English · German · Arabic</span>
+              </div>
+              <div class="mini-card">
+                <strong>Client Focus</strong>
+                <span>International founders, investors and growing companies</span>
+              </div>
+              <div class="mini-card">
+                <strong>Approach</strong>
+                <span>Structured, discreet, practical and commercially minded</span>
+              </div>
+              <div class="mini-card">
+                <strong>Network</strong>
+                <span>Coordination with tax advisors, legal experts and relevant interfaces</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="positioning-image">
+            <div class="positioning-frame">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&fit=crop" alt="Modern architecture in Germany" />
+            </div>
+            <div class="positioning-badge">
+              <strong>NIA Business Setup Germany</strong>
+              <span>Navigate · Implement · Achieve</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-label">About</div>
+        <h2>Why work with me.<br><em>Not just what I do.</em></h2>
+        <p class="section-intro">
+          Beyond the service itself, the question is simple: why should someone trust me with complex, cross-functional work?
+        </p>
+
+        <div class="about-grid">
+          <div class="about-media">
+            <img src="about-nia.jpg" alt="Sonia Zoghlami" />
+          </div>
+
+          <div class="about-text">
+            <p>I didn’t come to this from theory.</p>
+
+            <p>
+              I’ve worked across administrative structures, project-driven environments and production contexts — including collaboration with public institutions and ministries.
+            </p>
+
+            <p>Different sectors. Different systems. Different stakeholders.</p>
+
+            <p>
+              This gave me a broad view of how things actually work — and where they break.
+            </p>
+
+            <p>What I kept seeing was not a lack of expertise.</p>
+
+            <p>
+              It was the absence of someone who takes ownership of what happens in between.
+            </p>
+
+            <p>
+              Between teams.<br>
+              Between decisions.<br>
+              Between planning and execution.
+            </p>
+
+            <p>That is the gap I fill.</p>
+
+            <p>I don’t add another layer of advice.</p>
+
+            <p>
+              I make sure things actually move — structured, aligned and in the right order.
+            </p>
+
+            <div class="about-signature">
+              <strong>Sonia Zoghlami</strong>
+              <span>Coordination & Market Entry Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-label">How it works</div>
+        <h2>A clear process.<br><em>No guesswork.</em></h2>
+        <p class="section-intro">
+          The goal is not to overload you with isolated tasks. The goal is to create a sequence that makes commercial and operational sense.
+        </p>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-arrow">→</div>
+            <div class="process-step">01</div>
+            <h3>Discovery Call</h3>
+            <p>
+              We clarify your goals, your current status and the specific German setup questions behind your case.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-arrow">→</div>
+            <div class="process-step">02</div>
+            <h3>Assessment & Roadmap</h3>
+            <p>
+              You receive a structured view of what needs to happen, what depends on what, and where specialist support is required.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-arrow">✦</div>
+            <div class="process-step">03</div>
+            <h3>Execution & Coordination</h3>
+            <p>
+              NIA supports implementation, communication and follow-up so the process stays clear and moves forward.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-wrap">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>Your next move,<br><em>made clear.</em></h2>
+            <p>
+              Book a discovery call and get a structured first view of the steps required for your Germany setup. Clear, practical and focused on execution.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a class="btn-gold" href="mailto:hello@nia-business.com?subject=NIA%20Discovery%20Call">Book a Discovery Call</a>
+            <a class="btn-outline" href="mailto:hello@nia-business.com?subject=NIA%20Inquiry">Contact NIA</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-section">
+      <div class="container">
+
+        <div class="legal-box" id="impressum">
+          <h3>Impressum</h3>
+          <address>
+            <strong>Sonia Zoghlami</strong><br>
+            Ein.Satz<br>
+            Markusgasse 4<br>
+            32130 Enger<br>
+            Deutschland<br><br>
+
+            <strong>E-Mail:</strong> <a href="mailto:hello@nia-business.com">hello@nia-business.com</a>
+          </address>
+
+          <p style="margin-top:18px;">
+            <strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br>
+            Sonia Zoghlami<br>
+            Markusgasse 4<br>
+            32130 Enger
+          </p>
+        </div>
+
+        <div class="legal-box" id="datenschutz">
+          <h3>Datenschutzerklärung</h3>
+
+          <p>
+            <strong>1. Allgemeine Hinweise</strong><br>
+            Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Diese Website dient der Information über die Leistungen von NIA – Business Setup Germany.
+          </p>
+
+          <p>
+            <strong>2. Verantwortliche Stelle</strong><br>
+            Sonia Zoghlami<br>
+            Markusgasse 4<br>
+            32130 Enger<br>
+            Deutschland<br>
+            E-Mail: <a href="mailto:hello@nia-business.com">hello@nia-buiness.com</a>
+          </p>
+
+          <p>
+            <strong>3. Zugriffsdaten / Server-Logfiles</strong><br>
+            Beim Besuch dieser Website werden durch den Hosting-Anbieter automatisch technische Informationen erfasst, etwa IP-Adresse, Datum und Uhrzeit des Zugriffs, Browsertyp und Betriebssystem. Diese Daten dienen der technischen Bereitstellung und Sicherheit der Website.
+          </p>
+
+          <p>
+            <strong>4. Kontaktaufnahme per E-Mail</strong><br>
+            Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Eine Weitergabe an Dritte erfolgt nicht ohne Ihre Einwilligung.
+          </p>
+
+          <p>
+            <strong>5. Ihre Rechte</strong><br>
+            Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten im Rahmen der gesetzlichen Vorschriften.
+          </p>
+
+          <p>
+            <strong>6. Hinweis</strong><br>
+            Diese Website verwendet nach aktuellem Stand keine Kontaktformulare, keine Nutzerkonten und keine eigenen Cookies zur Auswertung des Nutzerverhaltens.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <img src="logo.png" alt="NIA logo" />
+      <span>Navigate · Implement · Achieve</span>
+    </div>
+    <span>© 2026 NIA – Business Setup Germany</span>
+    <div class="footer-links">
+      <a href="#impressum">Impressum</a>
+      <a href="#datenschutz">Datenschutz</a>
+    </div>
+  </footer>
+
+</body>
+</html>
