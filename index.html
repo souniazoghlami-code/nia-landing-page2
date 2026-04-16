@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NIA – Business Setup Germany</title>
   <meta name="description" content="NIA helps international founders and companies enter the German market with structure, clarity, and hands-on coordination." />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root{
       --gold:#c5a46d;
       --gold-light:#e5d0a0;
       --gold-dark:#9e7a3f;
       --black:#0b0b0c;
-      --charcoal:#151515;
       --cream:#f7f3ee;
       --white:#ffffff;
       --muted:#6f6a65;
       --line:#e6ddd2;
       --soft:#fdfaf6;
-      --glass:rgba(255,255,255,0.08);
     }
 
     html { scroll-behavior: smooth; }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--cream);
@@ -40,12 +41,11 @@
       padding: 0 6vw;
     }
 
-    /* NAV */
     nav {
       position: sticky;
       top: 0;
       z-index: 999;
-      background: rgba(247,243,238,0.84);
+      background: rgba(247,243,238,0.86);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(197,164,109,0.14);
     }
@@ -101,8 +101,9 @@
       color: var(--muted);
     }
 
-    .nav-links a:hover {
-      color: var(--black);
+    .nav-links a:hover,
+    footer a:hover {
+      color: var(--gold);
     }
 
     .nav-cta {
@@ -122,7 +123,6 @@
       transform: translateY(-1px);
     }
 
-    /* HERO */
     .hero {
       position: relative;
       min-height: 96vh;
@@ -150,8 +150,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(100deg, rgba(11,11,12,0.88) 0%, rgba(11,11,12,0.68) 38%, rgba(11,11,12,0.26) 100%);
+      background: linear-gradient(100deg, rgba(11,11,12,0.88) 0%, rgba(11,11,12,0.68) 38%, rgba(11,11,12,0.26) 100%);
     }
 
     .hero-inner {
@@ -290,7 +289,6 @@
       font-weight: 300;
     }
 
-    /* STRIP */
     .strip {
       background: var(--white);
       border-top: 1px solid var(--line);
@@ -329,7 +327,6 @@
       to { transform: translateX(-50%); }
     }
 
-    /* GENERIC SECTION */
     .section {
       padding: 112px 0;
     }
@@ -375,7 +372,6 @@
       font-weight: 300;
     }
 
-    /* SERVICES */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -470,7 +466,6 @@
       text-transform: uppercase;
     }
 
-    /* POSITIONING */
     .positioning {
       background: var(--black);
       color: var(--white);
@@ -608,7 +603,63 @@
       text-transform: uppercase;
     }
 
-    /* PROCESS */
+    .about {
+      background: linear-gradient(180deg, var(--soft) 0%, var(--cream) 100%);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 58px;
+      align-items: center;
+      margin-top: 56px;
+    }
+
+    .about-media {
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 34px 80px rgba(0,0,0,0.18);
+      aspect-ratio: 4 / 5;
+      background: var(--white);
+    }
+
+    .about-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-text p {
+      font-size: 0.92rem;
+      line-height: 1.95;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .about-text p + p {
+      margin-top: 12px;
+    }
+
+    .about-signature {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .about-signature strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+
+    .about-signature span {
+      color: var(--gold-dark);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     .process-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -667,9 +718,8 @@
       font-size: 0.82rem;
     }
 
-    /* CTA */
     .cta-wrap {
-      padding-bottom: 112px;
+      padding-bottom: 80px;
     }
 
     .cta-box {
@@ -745,7 +795,42 @@
       color: var(--gold-light);
     }
 
-    /* FOOTER */
+    .legal-section {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      padding: 80px 0;
+    }
+
+    .legal-box {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 36px 30px;
+      margin-bottom: 22px;
+    }
+
+    .legal-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+
+    .legal-box p,
+    .legal-box li,
+    .legal-box address {
+      font-size: 0.9rem;
+      line-height: 1.9;
+      color: var(--muted);
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .legal-box strong {
+      color: var(--black);
+      font-weight: 600;
+    }
+
     footer {
       background: var(--black);
       border-top: 1px solid rgba(255,255,255,0.06);
@@ -773,12 +858,19 @@
       gap: 16px;
     }
 
-    /* RESPONSIVE */
+    .footer-links {
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
     @media (max-width: 1080px) {
       .nav-links { display: none; }
+
       .hero-panel,
       .services-grid,
-      .process-grid {
+      .process-grid,
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
@@ -787,7 +879,8 @@
         grid-template-columns: 1fr;
       }
 
-      .positioning-image {
+      .positioning-image,
+      .about-media {
         order: -1;
       }
 
@@ -838,6 +931,10 @@
         align-items: flex-start;
         gap: 12px;
       }
+
+      .footer-links {
+        gap: 12px;
+      }
     }
   </style>
 </head>
@@ -858,7 +955,10 @@
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#positioning">Why NIA</a>
+        <a href="#about">About</a>
         <a href="#process">Process</a>
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
       </div>
 
       <a class="nav-cta" href="mailto:info@ein-satz.eu?subject=NIA%20Discovery%20Call">Book a Discovery Call</a>
@@ -1025,6 +1125,61 @@
       </div>
     </section>
 
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-label">About</div>
+        <h2>Why work with me.<br><em>Not just what I do.</em></h2>
+        <p class="section-intro">
+          Beyond the service itself, the question is simple: why should someone trust me with complex, cross-functional work?
+        </p>
+
+        <div class="about-grid">
+          <div class="about-media">
+            <img src="about-nia.jpg" alt="Sonia Zoghlami" />
+          </div>
+
+          <div class="about-text">
+            <p>I didn’t come to this from theory.</p>
+
+            <p>
+              I’ve worked across administrative structures, project-driven environments and production contexts — including collaboration with public institutions and ministries.
+            </p>
+
+            <p>Different sectors. Different systems. Different stakeholders.</p>
+
+            <p>
+              This gave me a broad view of how things actually work — and where they break.
+            </p>
+
+            <p>What I kept seeing was not a lack of expertise.</p>
+
+            <p>
+              It was the absence of someone who takes ownership of what happens in between.
+            </p>
+
+            <p>
+              Between teams.<br>
+              Between decisions.<br>
+              Between planning and execution.
+            </p>
+
+            <p>That is the gap I fill.</p>
+
+            <p>I don’t add another layer of advice.</p>
+
+            <p>
+              I make sure things actually move — structured, aligned and in the right order.
+            </p>
+
+            <div class="about-signature">
+              <strong>Sonia Zoghlami</strong>
+              <span>Coordination & Market Entry Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="process">
       <div class="container">
         <div class="section-label">How it works</div>
@@ -1081,6 +1236,70 @@
         </div>
       </div>
     </section>
+
+    <section class="legal-section">
+      <div class="container">
+
+        <div class="legal-box" id="impressum">
+          <h3>Impressum</h3>
+          <address>
+            <strong>Sonia Zoghlami</strong><br>
+            Ein.Satz<br>
+            Markusgasse 4<br>
+            32130 Enger<br>
+            Deutschland<br><br>
+
+            <strong>E-Mail:</strong> <a href="mailto:info@ein-satz.eu">info@ein-satz.eu</a>
+          </address>
+
+          <p style="margin-top:18px;">
+            <strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br>
+            Sonia Zoghlami<br>
+            Markusgasse 4<br>
+            32130 Enger
+          </p>
+        </div>
+
+        <div class="legal-box" id="datenschutz">
+          <h3>Datenschutzerklärung</h3>
+
+          <p>
+            <strong>1. Allgemeine Hinweise</strong><br>
+            Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Diese Website dient der Information über die Leistungen von NIA – Business Setup Germany.
+          </p>
+
+          <p>
+            <strong>2. Verantwortliche Stelle</strong><br>
+            Sonia Zoghlami<br>
+            Markusgasse 4<br>
+            32130 Enger<br>
+            Deutschland<br>
+            E-Mail: <a href="mailto:info@ein-satz.eu">info@ein-satz.eu</a>
+          </p>
+
+          <p>
+            <strong>3. Zugriffsdaten / Server-Logfiles</strong><br>
+            Beim Besuch dieser Website werden durch den Hosting-Anbieter automatisch technische Informationen erfasst, etwa IP-Adresse, Datum und Uhrzeit des Zugriffs, Browsertyp und Betriebssystem. Diese Daten dienen der technischen Bereitstellung und Sicherheit der Website.
+          </p>
+
+          <p>
+            <strong>4. Kontaktaufnahme per E-Mail</strong><br>
+            Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Eine Weitergabe an Dritte erfolgt nicht ohne Ihre Einwilligung.
+          </p>
+
+          <p>
+            <strong>5. Ihre Rechte</strong><br>
+            Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten im Rahmen der gesetzlichen Vorschriften.
+          </p>
+
+          <p>
+            <strong>6. Hinweis</strong><br>
+            Diese Website verwendet nach aktuellem Stand keine Kontaktformulare, keine Nutzerkonten und keine eigenen Cookies zur Auswertung des Nutzerverhaltens.
+          </p>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -1088,7 +1307,11 @@
       <img src="logo.png" alt="NIA logo" />
       <span>Navigate · Implement · Achieve</span>
     </div>
-    <span>© 2025 NIA – Business Setup Germany</span>
+    <span>© 2026 NIA – Business Setup Germany</span>
+    <div class="footer-links">
+      <a href="#impressum">Impressum</a>
+      <a href="#datenschutz">Datenschutz</a>
+    </div>
   </footer>
 
 </body>
