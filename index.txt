@@ -1274,7 +1274,7 @@
             Markusgasse 4<br>
             32130 Enger<br>
             Deutschland<br>
-            E-Mail: <a href="mailto:hello@nia-business.com">hello@nia-buiness.com</a>
+            E-Mail: <a href="mailto:hello@nia-business.com">hello@nia-business.com</a>
           </p>
 
           <p>
