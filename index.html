@@ -9,7 +9,36 @@
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+/* TESTIMONIAL */
+.featured-testimonial {
+  padding: 80px 20px;
+  background: #f9f6f2;
+  border-top: 1px solid rgba(197, 164, 109, 0.2);
+  border-bottom: 1px solid rgba(197, 164, 109, 0.2);
+}
 
+.featured-testimonial .wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.featured-testimonial .quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  line-height: 1.4;
+  color: #1c1c1c;
+  font-style: italic;
+}
+
+.featured-testimonial .author {
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a7a63;
+}
     :root{
       --gold:#c5a46d;
       --gold-light:#e5d0a0;
@@ -1002,18 +1031,17 @@
     </section>
 </section>
 
-<!-- TESTIMONIAL START -->
-<section style="padding: 60px 20px; background: #f9f6f2; text-align: center;">
-  <div style="max-width: 800px; margin: 0 auto;">
-    
-    <p style="font-size: 20px; font-style: italic; color: #333;">
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="featured-testimonial">
+  <div class="wrap">
+    <p class="quote">
       “Professional, proactive, and solution-oriented. They went beyond expectations to secure key information and facilitate direct engagement with the relevant entity.”
     </p>
-    
-    <span style="display: block; margin-top: 15px; font-size: 14px; color: #999;">
+    <p class="author">
       — Dr. AbdulMohsin Abdulla Alyafei, Doha, Qatar
-    </span>
-
+    </p>
   </div>
 </section>
 <!-- TESTIMONIAL END -->
